@@ -1,9 +1,12 @@
 # EtiquetaHf-Neto
 
 List to do:
--Validate fields --> Listo codigo de barras -- LISTO validar imprimir
--Barcode funtional  LISTO
+-save temporal images
 -zpl print
 -dpl print
 -testing
--diferenciar between zpl and dpl printer
+
+List Ready!!
+-Validate fields --> Barcode and Print
+-Barcode
+-zpl dpl according the printer
