@@ -10,6 +10,8 @@ using System.Xml;
 using System.IO;
 using System.Threading;
 using System.Globalization;
+using iTextSharp;
+using iTextSharp.text.pdf;
 
 namespace nuevaEtiqueta
 {
@@ -22,6 +24,9 @@ namespace nuevaEtiqueta
         Dictionary<string, string> etEspecie = new Dictionary<string, string>();
         //Dictionary<string, string> etAcopio = new Dictionary<string, string>();
 
+        Barcode128 code128 = new Barcode128();
+        Random random = new Random();
+        int randomNumber = -1;
         Boolean estado;
         private Form1 instance;
         public Form1()
@@ -94,7 +99,7 @@ namespace nuevaEtiqueta
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
-            //crear codigo barra
+            crearBarCode();
         }
 
         private void txtProductor_TextChanged(object sender, EventArgs e)
@@ -113,7 +118,7 @@ namespace nuevaEtiqueta
                 lblNomProductor.Text = nodoNombre.Item(0).InnerText;
                 lblCodProductor.Text = nodoCod.Item(0).InnerText;
 
-                //CREAR CODIGO BARRA
+                crearBarCode();
             }
 
 
@@ -129,7 +134,7 @@ namespace nuevaEtiqueta
                 lblVariedad.Text = variedad.Value.ToString();
             }
 
-            //crear codigo barra
+            crearBarCode();
         }
 
         private void comboEspecie_SelectedIndexChanged(object sender, EventArgs e)
@@ -141,7 +146,7 @@ namespace nuevaEtiqueta
                 lblEspecie.Text = especie.Value.ToString();
             }
 
-            //crear codigo barra
+            crearBarCode();
         }
 
 
@@ -153,5 +158,103 @@ namespace nuevaEtiqueta
             foreach (string ficheroActual in ficherosCarpeta)
                 File.Delete(ficheroActual);
         }
+        //------------------------------------------------------------------------------------
+
+        //crear codigo de barras
+        public int crearBarCode()
+        {
+            if (!ValidaCampos("barra"))
+            {
+
+                return 0;
+            }
+
+            if (randomNumber != -1) Image.FromFile(Application.StartupPath + @"\temp\" + randomNumber + ".bmp").Dispose();
+
+
+            code128.Code = txtProductor.Text + "" + comboEspecie.SelectedValue.ToString() + "" + comboVariedad.SelectedValue.ToString();
+
+            // Create a blank image 
+            System.Drawing.Bitmap bmpimg = new Bitmap(600, 80);
+            //bmpimg.SetResolution(960.0F, 960.0F);
+
+            // provide width and height based on the barcode image to be generated. harcoded for sample purpose
+
+            Graphics bmpgraphics = Graphics.FromImage(bmpimg);
+            bmpgraphics.Clear(Color.White); // Provide this, else the background will be black by default
+            Point ulCorner = new Point(0, 0);
+            Point urCorner = new Point(250, 0);
+            Point llCorner = new Point(0, 38);
+            Point[] destPara = { ulCorner, urCorner, llCorner };
+            // generate the code128 barcode
+            bmpgraphics.DrawImage(code128.CreateDrawingImage(System.Drawing.Color.Black, System.Drawing.Color.White), 15, 0);
+            bmpgraphics.DrawImage(code128.CreateDrawingImage(System.Drawing.Color.Black, System.Drawing.Color.White), 15, 10);
+
+            //generate the text below the barcode image. If you want the placement to be dynamic, calculate the point based on size of the image
+            bmpgraphics.DrawString(code128.Code, new System.Drawing.Font("Arial", 8, FontStyle.Regular), SystemBrushes.WindowText, new Point(35, 38));
+
+            // Save the output stream as gif. You can also save it to external file
+            MemoryStream ms = new MemoryStream();
+
+            randomNumber = random.Next(0, 100000);
+            bmpimg.Save(Application.StartupPath + @"\temp\" + randomNumber + ".bmp", System.Drawing.Imaging.ImageFormat.Gif);
+
+            imgBarcode.Image = Image.FromFile(Application.StartupPath + @"\temp\" + randomNumber + ".bmp");
+
+            return 0;
+        }
+
+
+
+
+
+
+
+
+
+        //valida 
+        private bool ValidaCampos(string cod)
+        {
+            if (cod == "barra")
+            {
+                if(txtProductor.Text != "" && comboEspecie.SelectedValue.ToString() != "" &&
+                    comboVariedad.SelectedValue.ToString() != "" &&
+                    numericUpDown1.Value > 0 && numericUpDown1.Value < 9999 )//numero cajas
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }/*
+            else if (cod == "imprimir")
+            {
+                if (
+                    textBoxLote.Text != "" &&
+                    textBoxProductor.Text != "" &&
+                    comboMaterial.SelectedValue.ToString() != "" &&
+                    comboAcopio.SelectedValue.ToString() != "" &&
+                    comboVariedad.SelectedValue.ToString() != "" &&
+                    numericUpCajas.Value != 0
+
+                    )
+                {
+                    return true;
+                }
+                else
+                {
+                    MessageBox.Show("Ingrese todos los datos solicitados antes de imprimir");
+                    return false;
+                }
+            }*/
+
+            return false;
+        }
+
+
+
+
+
     }
 }
