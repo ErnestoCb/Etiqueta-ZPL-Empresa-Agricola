@@ -6,3 +6,4 @@ List to do:
 -zpl print
 -dpl print
 -testing
+-diferenciar between zpl and dpl printer
