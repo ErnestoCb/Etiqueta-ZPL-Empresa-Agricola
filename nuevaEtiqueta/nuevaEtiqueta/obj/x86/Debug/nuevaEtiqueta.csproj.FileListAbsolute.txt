@@ -1,0 +1,8 @@
+C:\Users\ernes\Desktop\RealEtiqueta\nuevaEtiqueta\nuevaEtiqueta\bin\Debug\nuevaEtiqueta.exe.config
+C:\Users\ernes\Desktop\RealEtiqueta\nuevaEtiqueta\nuevaEtiqueta\bin\Debug\nuevaEtiqueta.exe
+C:\Users\ernes\Desktop\RealEtiqueta\nuevaEtiqueta\nuevaEtiqueta\bin\Debug\nuevaEtiqueta.pdb
+C:\Users\ernes\Desktop\RealEtiqueta\nuevaEtiqueta\nuevaEtiqueta\obj\x86\Debug\nuevaEtiqueta.Form1.resources
+C:\Users\ernes\Desktop\RealEtiqueta\nuevaEtiqueta\nuevaEtiqueta\obj\x86\Debug\nuevaEtiqueta.Properties.Resources.resources
+C:\Users\ernes\Desktop\RealEtiqueta\nuevaEtiqueta\nuevaEtiqueta\obj\x86\Debug\nuevaEtiqueta.csproj.GenerateResource.Cache
+C:\Users\ernes\Desktop\RealEtiqueta\nuevaEtiqueta\nuevaEtiqueta\obj\x86\Debug\nuevaEtiqueta.exe
+C:\Users\ernes\Desktop\RealEtiqueta\nuevaEtiqueta\nuevaEtiqueta\obj\x86\Debug\nuevaEtiqueta.pdb
