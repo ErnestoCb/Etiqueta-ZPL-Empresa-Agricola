@@ -41,12 +41,12 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.txtProductor = new System.Windows.Forms.TextBox();
             this.panelEtiqueta = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblVariedad = new System.Windows.Forms.Label();
-            this.lblEspecie = new System.Windows.Forms.Label();
-            this.lblCodProductor = new System.Windows.Forms.Label();
-            this.lblNomProductor = new System.Windows.Forms.Label();
             this.imgBarcode = new System.Windows.Forms.PictureBox();
+            this.lblNomProductor = new System.Windows.Forms.Label();
+            this.lblCodProductor = new System.Windows.Forms.Label();
+            this.lblEspecie = new System.Windows.Forms.Label();
+            this.lblVariedad = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.boxLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panelEtiqueta.SuspendLayout();
@@ -178,45 +178,13 @@
             this.panelEtiqueta.Size = new System.Drawing.Size(333, 209);
             this.panelEtiqueta.TabIndex = 14;
             // 
-            // label2
+            // imgBarcode
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label2.Location = new System.Drawing.Point(45, 166);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(165, 31);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "___/___/___";
-            // 
-            // lblVariedad
-            // 
-            this.lblVariedad.AutoSize = true;
-            this.lblVariedad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblVariedad.Location = new System.Drawing.Point(32, 142);
-            this.lblVariedad.Name = "lblVariedad";
-            this.lblVariedad.Size = new System.Drawing.Size(56, 15);
-            this.lblVariedad.TabIndex = 1;
-            this.lblVariedad.Text = "Variedad";
-            // 
-            // lblEspecie
-            // 
-            this.lblEspecie.AutoSize = true;
-            this.lblEspecie.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblEspecie.Location = new System.Drawing.Point(32, 127);
-            this.lblEspecie.Name = "lblEspecie";
-            this.lblEspecie.Size = new System.Drawing.Size(51, 15);
-            this.lblEspecie.TabIndex = 2;
-            this.lblEspecie.Text = "Especie";
-            // 
-            // lblCodProductor
-            // 
-            this.lblCodProductor.AutoSize = true;
-            this.lblCodProductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.lblCodProductor.Location = new System.Drawing.Point(32, 112);
-            this.lblCodProductor.Name = "lblCodProductor";
-            this.lblCodProductor.Size = new System.Drawing.Size(89, 15);
-            this.lblCodProductor.TabIndex = 3;
-            this.lblCodProductor.Text = "Cod_Productor";
+            this.imgBarcode.Location = new System.Drawing.Point(18, 7);
+            this.imgBarcode.Name = "imgBarcode";
+            this.imgBarcode.Size = new System.Drawing.Size(303, 87);
+            this.imgBarcode.TabIndex = 5;
+            this.imgBarcode.TabStop = false;
             // 
             // lblNomProductor
             // 
@@ -228,13 +196,45 @@
             this.lblNomProductor.TabIndex = 4;
             this.lblNomProductor.Text = "Nom_Productor";
             // 
-            // imgBarcode
+            // lblCodProductor
             // 
-            this.imgBarcode.Location = new System.Drawing.Point(18, 7);
-            this.imgBarcode.Name = "imgBarcode";
-            this.imgBarcode.Size = new System.Drawing.Size(303, 74);
-            this.imgBarcode.TabIndex = 5;
-            this.imgBarcode.TabStop = false;
+            this.lblCodProductor.AutoSize = true;
+            this.lblCodProductor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblCodProductor.Location = new System.Drawing.Point(32, 112);
+            this.lblCodProductor.Name = "lblCodProductor";
+            this.lblCodProductor.Size = new System.Drawing.Size(89, 15);
+            this.lblCodProductor.TabIndex = 3;
+            this.lblCodProductor.Text = "Cod_Productor";
+            // 
+            // lblEspecie
+            // 
+            this.lblEspecie.AutoSize = true;
+            this.lblEspecie.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblEspecie.Location = new System.Drawing.Point(32, 127);
+            this.lblEspecie.Name = "lblEspecie";
+            this.lblEspecie.Size = new System.Drawing.Size(51, 15);
+            this.lblEspecie.TabIndex = 2;
+            this.lblEspecie.Text = "Especie";
+            // 
+            // lblVariedad
+            // 
+            this.lblVariedad.AutoSize = true;
+            this.lblVariedad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.lblVariedad.Location = new System.Drawing.Point(32, 142);
+            this.lblVariedad.Name = "lblVariedad";
+            this.lblVariedad.Size = new System.Drawing.Size(56, 15);
+            this.lblVariedad.TabIndex = 1;
+            this.lblVariedad.Text = "Variedad";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label2.Location = new System.Drawing.Point(45, 166);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(165, 31);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "___/___/___";
             // 
             // Form1
             // 

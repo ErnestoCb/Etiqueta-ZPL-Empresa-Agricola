@@ -6,3 +6,6 @@ C:\Users\ernes\Desktop\RealEtiqueta\nuevaEtiqueta\nuevaEtiqueta\obj\x86\Debug\nu
 C:\Users\ernes\Desktop\RealEtiqueta\nuevaEtiqueta\nuevaEtiqueta\obj\x86\Debug\nuevaEtiqueta.csproj.GenerateResource.Cache
 C:\Users\ernes\Desktop\RealEtiqueta\nuevaEtiqueta\nuevaEtiqueta\obj\x86\Debug\nuevaEtiqueta.exe
 C:\Users\ernes\Desktop\RealEtiqueta\nuevaEtiqueta\nuevaEtiqueta\obj\x86\Debug\nuevaEtiqueta.pdb
+C:\Users\ernes\Desktop\RealEtiqueta\nuevaEtiqueta\nuevaEtiqueta\bin\Debug\itextsharp.dll
+C:\Users\ernes\Desktop\RealEtiqueta\nuevaEtiqueta\nuevaEtiqueta\bin\Debug\itextsharp.xml
+C:\Users\ernes\Desktop\RealEtiqueta\nuevaEtiqueta\nuevaEtiqueta\obj\x86\Debug\nuevaEtiqueta.csprojResolveAssemblyReference.cache
